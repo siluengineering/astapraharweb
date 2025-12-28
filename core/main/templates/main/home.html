@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 border">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">Welcome to Astaprahar Web</h1>
+        <p class="col-md-8 fs-4 mx-auto">
+            Your dedicated platform for community engagement and membership management. 
+            Explore our services and join us today.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{% url 'membership' %}" class="btn btn-primary btn-lg px-4 gap-3">Join Membership</a>
+            <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg px-4">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+        <div>
+            <h3 class="fs-2 text-body-emphasis">Our Mission</h3>
+            <p>Providing a seamless digital experience for all our community members.</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div>
+            <h3 class="fs-2 text-body-emphasis">Contact Us</h3>
+            <p>Have questions? Our support team is available to help you 24/7.</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div>
+            <h3 class="fs-2 text-body-emphasis">Secure</h3>
+            <p>Your data and membership details are protected with industry-standard security.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

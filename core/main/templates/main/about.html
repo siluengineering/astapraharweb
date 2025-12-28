@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold text-primary">About Astaprahar</h1>
+            <p class="lead text-muted">Dedicated to building a stronger, more connected community through digital innovation.</p>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-7">
+            <h2 class="mb-4">Our Mission</h2>
+            <p>Founded with the vision of streamlining community management, <strong>Astapraharweb</strong> serves as a central hub for membership, communication, and event coordination. We believe that technology should bring people together, not keep them apart.</p>
+            
+            <h2 class="mt-5 mb-4">Why Join Us?</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">✅ Exclusive access to community resources</li>
+                <li class="list-group-item">✅ Direct communication channels with leadership</li>
+                <li class="list-group-item">✅ Simplified membership renewal and tracking</li>
+                <li class="list-group-item">✅ Real-time updates on upcoming events</li>
+            </ul>
+        </div>
+
+        <div class="col-md-5">
+            <div class="card shadow-sm border-0 bg-dark text-white p-4">
+                <div class="card-body text-center">
+                    <h3 class="card-title h1">100+</h3>
+                    <p class="card-text">Active Members</p>
+                    <hr class="bg-light">
+                    <h3 class="card-title h1">24/7</h3>
+                    <p class="card-text">Support Available</p>
+                    <hr class="bg-light">
+                    <h3 class="card-title h1">Zero</h3>
+                    <p class="card-text">Hidden Costs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 pt-5 text-center border-top">
+        <div class="col-12">
+            <h3 class="mb-4">Ready to be a part of our journey?</h3>
+            <a href="{% url 'membership' %}" class="btn btn-primary btn-lg px-5">Get Started Today</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead">Have a question? We'd love to hear from you.</p>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-7">
+            <div class="card shadow-sm p-4">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-success">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% for field in form %}
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.errors %}
+                                <div class="text-danger small">{{ field.errors }}</div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="p-4 bg-light rounded-3 border">
+                <h3>Our Office</h3>
+                <p class="text-muted">Visit us or reach out through our official channels.</p>
+                <hr>
+                
+                <div class="mb-4">
+                    <h5>📍 Address</h5>
+                    <p>123 Astaprahar Lane, Tech City, 560001</p>
+                </div>
+
+                <div class="mb-4">
+                    <h5>📧 Email</h5>
+                    <p>support@astapraharweb.com</p>
+                </div>
+
+                <div class="mb-4">
+                    <h5>📞 Phone</h5>
+                    <p>+1 (555) 000-1234</p>
+                </div>
+
+                <div class="mt-4">
+                    <h5>Working Hours</h5>
+                    <p class="small text-muted">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
