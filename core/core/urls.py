@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include  # Make sure 'include' is imported
 
 urlpatterns = [
+    path('', include('main.urls')), 
     path('admin/', admin.site.urls),
     # This empty string '' means the root domain (e.g., www.astaprahar.com)
-    path('', include('main.urls')), 
+    
 ]

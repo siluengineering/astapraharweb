@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-a#&a85ye5fwmo(n)!t6wji2!_c)5s(x_4x)#6z!zj(15&5s@0+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['siluengineering.pythonanywhere.com']
-
-
+#ALLOWED_HOSTS = ['siluengineering.pythonanywhere.com']
+#ALLOWED_HOSTS = ['siluengineering.pythonanywhere.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'main.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
